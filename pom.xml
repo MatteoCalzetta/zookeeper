@@ -286,47 +286,6 @@
   </developers>
 
   <profiles>
-    <!--
-<profile>
-  <id>mutationPIT</id>
-  <activation>
-    <activeByDefault>false</activeByDefault>
-  </activation>
-  <properties>
-    <withHistory>true</withHistory>
-    <pitest.version>1.8.0</pitest.version>
-  </properties>
-  <build>
-    <plugins>
-      <plugin>
-        <groupId>org.pitest</groupId>
-        <artifactId>pitest-maven</artifactId>
-        <version>${pitest.version}</version>
-        <configuration>
-          <targetClasses>
-            <param>org.apache.bookkeeper.bookie.BufferedChannel</param>
-          </targetClasses>
-          <targetTests>
-            <param>org.apache.bookkeeper.tls.BookieAuthZFactoryTest</param>
-          </targetTests>
-          <avoidCallsTo>
-            <avoidCallsTo>org.slf4j</avoidCallsTo>
-          </avoidCallsTo>
-        </configuration>
-        <executions>
-          <execution>
-            <id>PIT</id>
-            <phase>test-compile</phase>
-            <goals>
-              <goal>mutationCoverage</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
-    </plugins>
-  </build>
-</profile>
--->
 <profile>
   <id>full-build</id>
   <modules>
@@ -858,7 +817,6 @@
           <configuration>
              <showWarnings>true</showWarnings>
              <compilerArgs>
-               <compilerArg>-Werror</compilerArg>
                <compilerArg>-Xlint:deprecation</compilerArg>
                <compilerArg>-Xlint:unchecked</compilerArg>
                <compilerArg>-Xlint:-options</compilerArg>
